@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router-dom"
 import TaskItem from "./TaskItem"
 
-function TaskList({ tasks, onDelete, updateTask }) {
+function TaskList({ tasks, deleteTask, updateTask }) {
   const [statusFilter, setStatusFilter] = useState("all")
   const [sortOrder, setSortOrder] = useState("high-to-low")
   const [showStatusDropdown, setShowStatusDropdown] = useState(false)
@@ -204,7 +204,7 @@ function TaskList({ tasks, onDelete, updateTask }) {
             <TaskItem
               key={task.id || Date.now()}
               task={task}
-              onDelete={onDelete}
+              deleteTask={deleteTask}
               updateTask={updateTask}
               formatDate={formatDate}
             />

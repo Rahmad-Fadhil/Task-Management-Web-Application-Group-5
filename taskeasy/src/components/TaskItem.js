@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router-dom"
 
-function TaskItem({ task, onDelete, updateTask, formatDate }) {
+function TaskItem({ task, deleteTask, updateTask, formatDate }) {
   const [showMenu, setShowMenu] = useState(false)
   const [showStatusDropdown, setShowStatusDropdown] = useState(false)
   const menuRef = useRef(null)
@@ -142,7 +142,7 @@ function TaskItem({ task, onDelete, updateTask, formatDate }) {
                   </div>
                 </Link>
                 <button
-                  onClick={() => onDelete(task.id)}
+                  onClick={() => deleteTask(task.id)}
                   className="block w-full text-left px-4 py-2 text-red-600 hover:bg-gray-50 transition-colors duration-200"
                 >
                   <div className="flex items-center">

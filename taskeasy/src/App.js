@@ -45,6 +45,17 @@
     navigate("/")
   }
 
+  const deleteTask = (TaskId) => {
+    if(window.confirm("are you sure you want to delete this task?")) {
+      setTasks((prevTasks) => {
+        const updatedTasks = prevTasks.filter((task) => task.id !== TaskId)
+
+        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(updatedTasks))
+        return updatedTasks
+      })
+    }
+  }
+
   const getTaskById = (id) => {
     // Ambil data terbaru dari localStorage untuk memastikan konsistensi
     const storedTasks = localStorage.getItem(LOCAL_STORAGE_KEY)
@@ -58,7 +69,7 @@
       <Header />
       <main className="container mx-auto px-4 py-8 max-w-5xl">
         <Routes>
-          <Route path="/" element={<TaskList tasks={tasks} updateTask={updateTask}/>} />
+          <Route path="/" element={<TaskList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask}/>} />
           <Route path="/add" element={<AddTaskPage onSubmit={addTask} />} />
           <Route path="/edit/:taskId" element={<EditTaskPage onSubmit={updateTask} getTaskById={getTaskById} />} />
         </Routes>
