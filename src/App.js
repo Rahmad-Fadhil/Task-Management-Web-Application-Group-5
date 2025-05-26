@@ -1,7 +1,7 @@
 "use client"
 
  import { useState, useEffect } from "react"
- import { Routes, Route, useNavigate, Navigate, useParams } from "react-router-dom"
+ import { Routes, Route, useNavigate } from "react-router-dom"
  import Header from "./components/Header"
  import TaskList from "./components/TaskList"
  import AddTaskPage from "./pages/AddTaskPage"
