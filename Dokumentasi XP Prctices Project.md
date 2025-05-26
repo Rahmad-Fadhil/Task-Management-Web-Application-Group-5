@@ -4,8 +4,8 @@
 
 * Role
   * Develop = Rahmad Fadhil
-  * Designated customer = mira
-  * Coach = nai
+  * Designated customer = Miranda Nadilla Putri
+  * Coach = Nailah Assyifa
   
 * User Story
 
