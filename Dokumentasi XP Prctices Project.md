@@ -1,5 +1,20 @@
 ### Dokumentasi XP Prctices Project
 
+## Day 1
 
-![Screenshot 2025-05-26 223528](https://github.com/user-attachments/assets/db6dc48c-6a04-4d38-bf4f-18f78ea065e9)
+* Role
+  * Develop = Rahmad Fadhil
+  * Designated customer = mira
+  * Coach = nai
+  
+* User Story
+
+
+Role | Goal | Reason | Priority | Estimate | Status
+-----|------|--------|----------|----------|--------
+User |Create task|To manage my task |High|4|Todo
+User |View task| To keep track of what I need to do | Low | 1 | To do
+User |Update task|To adjust tasks according to any changes needed | High| 3| To do
+User |Delete task| To stay organized by removing tasks that are no longer relevant | Medium |2 | To do
+
 
